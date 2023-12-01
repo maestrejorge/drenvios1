@@ -6,9 +6,9 @@ const welcome = require("./Welcome.js")
 const router = Router();
 
 
-router.use("/products", product)
-router.use("/", price)
 router.use("/", welcome)
+router.use("/products", product)
+router.use("/price", price)
 router.use("/users", users)
 
 router.use((req, res, next) => {

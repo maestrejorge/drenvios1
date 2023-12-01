@@ -4,9 +4,8 @@ async function getAllProducts() {
     try {
         const db = await connectToDatabase();
         if (!db) throw "No Data "
-        const info = await db.collection('products').find({}).toArray();
-        console.log(info)
-        return info
+        const allProduct = await db.collection('products').find({}).toArray();
+        return allProduct
     } catch (error) {
         throw error;
     }
