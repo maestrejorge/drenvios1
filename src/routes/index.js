@@ -10,11 +10,15 @@ router.use("/products", product)
 router.use("/", price)
 router.use("/", welcome)
 router.use("/users", users)
+
 router.use((req, res, next) => {
-    const error = new Error("Ruta no definida");
+    const error = new Error('Ruta no definida');
     error.status = 404;
-    res.status(404).json({ error: error.message }); // Agrega esta línea para enviar el mensaje del error
-    next(error);
+    next(error); 
+});
+
+router.use((err, req, res, next) => {
+    res.status(err.status || 500).json({ error: err.message || 'Internal server error' });
 });
 
 module.exports = router;
