@@ -54,8 +54,8 @@ async function getWelcome(req, res) {
                 to implement two public routes:</p>
         
                 <ol>
-                    <li><strong>/products:</strong> This route should return an array containing only the products that are currently in stock.</li>
-                    <li><strong>/price/{user_id}/{nombre_producto}:</strong> Some clients in this business have special pricing for certain brands. This route should return the special price for the given client and brand, if available. If the client doesn't have a special price for the brand, the route should return the base price.</li>
+                    <li><strong>https://drenvios1.onrender.com//products:</strong> This route should return an array containing only the products that are currently in stock.</li>
+                    <li><strong>https://drenvios1.onrender.com//price/{user_id}/{nombre_producto}:</strong> Some clients in this business have special pricing for certain brands. This route should return the special price for the given client and brand, if available. If the client doesn't have a special price for the brand, the route should return the base price.</li>
                 </ol>
         
                 <p>We wish you the best of luck!</p>
